@@ -113,8 +113,8 @@ import nodemailer from 'nodemailer';
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 's92084072@ousl.lk',
-        pass: '200021403688'
+        user: 'sendermail',
+        pass: 'pw'
     }
 });
 
@@ -125,7 +125,7 @@ app.post('/send-email', (req, res) => {
     // Email content
     const mailOptions = {
         from: 'SayCheese Booking System',
-        to: 'maleeshapathirana1@gmail.com',
+        to: 'recivermail',
         subject: 'New Form Submission',
         text: `Name: ${name}\nNIC: ${nic}`
     };
